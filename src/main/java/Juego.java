@@ -25,68 +25,72 @@ public class Juego extends JFrame {
     }
 
     private void inicializarBotones() {
+        botonesEnMapa(boton1);
         boton1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
             }
         });
-
+        botonesEnMapa(boton2);
         boton2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
             }
         });
-
+        botonesEnMapa(boton3);
         boton3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
             }
         });
-
+        botonesEnMapa(boton4);
         boton4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
             }
         });
-
+        botonesEnMapa(boton5);
         boton5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
             }
         });
-
+        botonesEnMapa(boton6);
         boton6.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
             }
         });
-
+        botonesEnMapa(boton7);
         boton7.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
             }
         });
-
+        botonesEnMapa(boton8);
         boton8.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
             }
         });
-
+        botonesEnMapa(boton9);
         boton9.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 
             }
         });
+    }
+    private void botonesEnMapa(JButton boton) {
+        botones.put("boton" + boton.getText(), boton);
     }
 
     private void inicializarVentana() {
