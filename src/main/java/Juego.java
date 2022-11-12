@@ -108,6 +108,20 @@ public class Juego extends JFrame {
         int oeste = centro - 1;
         coords.add(oeste);
 
+        //solucion problema con condiciones
+
+        if (centro == 3)
+            coords.remove((Integer) 4);
+
+        else if (centro == 4)
+            coords.remove((Integer) 3);
+
+        else if (centro == 6)
+            coords.remove((Integer) 7);
+
+        else if (centro == 7)
+            coords.remove((Integer) 6);
+
         for (Integer coord : coords) {
             if ((int) coord < 10 && (int) coord > 0) {
                 darColor(botones.get("boton" + coord));
