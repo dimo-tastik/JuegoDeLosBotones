@@ -29,68 +29,100 @@ public class Juego extends JFrame {
         boton1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                rangoDeColor(boton1);
             }
         });
         botonesEnMapa(boton2);
         boton2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                rangoDeColor(boton2);
             }
         });
         botonesEnMapa(boton3);
         boton3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                rangoDeColor(boton3);
             }
         });
         botonesEnMapa(boton4);
         boton4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                rangoDeColor(boton4);
             }
         });
         botonesEnMapa(boton5);
         boton5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                rangoDeColor(boton5);
             }
         });
         botonesEnMapa(boton6);
         boton6.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                rangoDeColor(boton6);
             }
         });
         botonesEnMapa(boton7);
         boton7.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                rangoDeColor(boton7);
             }
         });
         botonesEnMapa(boton8);
         boton8.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                rangoDeColor(boton8);
             }
         });
         botonesEnMapa(boton9);
         boton9.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                rangoDeColor(boton9);
             }
         });
     }
     private void botonesEnMapa(JButton boton) {
         botones.put("boton" + boton.getText(), boton);
+    }
+
+    private void rangoDeColor(JButton boton) {
+
+        ArrayList<Integer> coords = new ArrayList<Integer>();
+
+        int centro = Integer.parseInt(boton.getText());
+        coords.add(centro);
+        int norte = centro - 3;
+        coords.add(norte);
+        int sur = centro + 3;
+        coords.add(sur);
+        int este = centro + 1;
+        coords.add(este);
+        int oeste = centro - 1;
+        coords.add(oeste);
+
+        for (Integer coord : coords) {
+            if ((int) coord < 10 && (int) coord > 0) {
+                darColor(botones.get("boton" + coord));
+            }
+        }
+    }
+
+    private void darColor(JButton boton) {
+        if (boton.getBackground() == Color.green) {
+            boton.setForeground(Color.red);
+            boton.setBackground(Color.red);
+        } else {
+            boton.setForeground(Color.green);
+            boton.setBackground(Color.green);
+        }
     }
 
     private void inicializarVentana() {
